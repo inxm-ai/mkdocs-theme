@@ -304,12 +304,15 @@ img, svg, video { max-width: 100%; }
 .header-links__repo { display: inline-grid; place-items: center; color: var(--fg-secondary); }
 .header-links__repo svg { display: block; }
 
-.theme-toggle__sun { display: none; }
-:root[data-theme="dark"] .theme-toggle__sun { display: block; }
-:root[data-theme="dark"] .theme-toggle__moon { display: none; }
+/* Show one icon at a time: sun while dark (offers light), moon while light.
+   Selectors carry `.theme-toggle` so they outrank the generic `.icon-btn svg`. */
+.theme-toggle .theme-toggle__sun { display: none; }
+.theme-toggle .theme-toggle__moon { display: block; }
+:root[data-theme="dark"] .theme-toggle .theme-toggle__sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .theme-toggle__moon { display: none; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle__sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle__moon { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .theme-toggle__sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .theme-toggle__moon { display: none; }
 }
 
 /* Search */
