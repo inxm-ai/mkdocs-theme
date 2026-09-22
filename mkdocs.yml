@@ -1,0 +1,56 @@
+# Demo / development site for the INXM MkDocs theme.
+# Run:  mkdocs serve
+site_name: INXM MkDocs Theme
+site_description: An MkDocs theme in the INXM design system.
+site_author: INXM GmbH
+site_url: https://inxm-ai.github.io/mkdocs-theme/
+repo_url: https://github.com/inxm-ai/mkdocs-theme
+repo_name: inxm-ai/mkdocs-theme
+edit_uri: edit/main/docs/
+copyright: © INXM GmbH
+
+theme:
+  name: inxm
+  tagline: Theme docs
+  nav_links:
+    - title: inxm.ai
+      url: https://inxm.ai
+  footer_links:
+    - title: Imprint
+      url: https://inxm.ai/imprint/
+    - title: Privacy
+      url: https://inxm.ai/privacy/
+
+nav:
+  - Start: index.md
+  - Guide:
+      - Installation: guide/installation.md
+      - Configuration: guide/configuration.md
+      - Customization: guide/customization.md
+  - Reference:
+      - Markdown showcase: reference/markdown.md
+      - Template blocks: reference/blocks.md
+  - inxm.ai: https://inxm.ai
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
+
+plugins:
+  - search

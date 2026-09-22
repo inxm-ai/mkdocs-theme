@@ -1,0 +1,9 @@
+.venv/
+site/
+dist/
+build/
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
+.mkdocs-cache/

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{%- block htmltitle %}<title>Page not found · {{ config.site_name }}</title>{% endblock %}
+{%- block content %}
+<article class="doc doc--404">
+  <p class="eyebrow">404</p>
+  <div class="md">
+    <h1>Page not found</h1>
+    <p>The page you asked for does not exist at this address. It may have moved, or the link may be out of date.</p>
+    <p>
+      <a class="btn btn-primary" href="{{ nav.homepage.url|url }}">Go to the start page <span class="arrow">→</span></a>
+      {%- if 'search' in config.plugins %}
+      <a class="btn btn-secondary" href="{{ 'search.html'|url }}">Search the docs</a>
+      {%- endif %}
+    </p>
+  </div>
+</article>
+{%- endblock %}
+{%- block toc %}{% endblock %}

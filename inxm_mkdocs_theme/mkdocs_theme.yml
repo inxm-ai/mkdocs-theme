@@ -1,0 +1,48 @@
+# INXM MkDocs theme — configuration defaults.
+# Override any key under `theme:` in your mkdocs.yml.
+
+static_templates:
+  - 404.html
+
+locale: en
+
+include_search_page: true
+search_index_only: false
+
+# auto | dark | light. "auto" follows the visitor's OS setting and can be
+# switched with the toggle in the header (persisted in localStorage).
+color_scheme: auto
+color_scheme_toggle: true
+
+# Load Satoshi from the Fontshare CDN like inxm.ai does. Set to false for
+# fully offline / no-third-party builds; the theme then falls back to Geist,
+# which ships with the package.
+fontshare: true
+
+# Branding. `logo` is a path relative to docs_dir. When null, the INXM pill
+# mark is rendered inline as SVG. `logo_text` defaults to site_name; set it to
+# false to hide the text next to the logo.
+logo: null
+logo_text: null
+
+# Optional short label rendered above the sidebar navigation ("// Docs").
+tagline: Docs
+
+# Extra links in the header, e.g.
+#   nav_links:
+#     - title: inxm.ai
+#       url: https://inxm.ai
+nav_links: []
+
+# Layout
+show_toc: true
+show_prev_next: true
+show_edit_link: true
+show_search: true
+
+# Sidebar sections nested deeper than this start collapsed.
+nav_expand_depth: 1
+
+# Footer. `footer_text` accepts HTML. Defaults to config.copyright.
+footer_text: null
+footer_links: []

@@ -1,0 +1,37 @@
+{#- Recursive sidebar navigation and table of contents macros. -#}
+{%- macro render_nav(items, depth) -%}
+<ul class="nav__list nav__list--{{ depth }}">
+  {%- for item in items %}
+  {%- if item.is_section %}
+  <li class="nav__item nav__item--section{% if item.active %} is-active{% endif %}">
+    <details{% if item.active or depth < config.theme.nav_expand_depth %} open{% endif %}>
+      <summary class="nav__section">
+        <span>{{ item.title }}</span>
+        <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2.5 7.5 6 4 9.5"/></svg>
+      </summary>
+      {{ render_nav(item.children, depth + 1) }}
+    </details>
+  </li>
+  {%- elif item.is_link %}
+  <li class="nav__item">
+    <a class="nav__link nav__link--external" href="{{ item.url|url }}"{% if item.url.startswith('http') %} rel="noopener" target="_blank"{% endif %}>{{ item.title }}<span class="nav__ext" aria-hidden="true">↗</span></a>
+  </li>
+  {%- else %}
+  <li class="nav__item{% if item.active %} is-active{% endif %}">
+    <a class="nav__link" href="{{ item.url|url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+  </li>
+  {%- endif %}
+  {%- endfor %}
+</ul>
+{%- endmacro -%}
+
+{%- macro render_toc(items) -%}
+<ul class="toc__list">
+  {%- for item in items %}
+  <li class="toc__item toc__item--{{ item.level }}">
+    <a class="toc__link" href="{{ item.url }}">{{ item.title }}</a>
+    {%- if item.children %}{{ render_toc(item.children) }}{% endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endmacro -%}

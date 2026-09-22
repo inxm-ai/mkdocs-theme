@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="INXM">
+  <!-- The // mark: same motif the site uses for eyebrows and nav items.
+       Accent follows the design system: #FF5900 light, #FF7A33 dark. -->
+  <style>
+    .field { fill: #1F1F1F; }
+    .mark  { stroke: #FF5900; }
+    @media (prefers-color-scheme: dark) {
+      .field { fill: #0D0D0D; }
+      .mark  { stroke: #FF7A33; }
+    }
+  </style>
+  <rect class="field" width="24" height="24" rx="5"/>
+  <g class="mark" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <path d="M7.1 17.4 L11.1 6.6"/>
+    <path d="M12.9 17.4 L16.9 6.6"/>
+  </g>
+</svg>
