@@ -79,6 +79,17 @@ $ mkdocs build
 INFO - Documentation built in 0.42 seconds
 ```
 
+## Diagrams
+
+Click the diagram, or focus it and press Enter or Space, to open a larger view.
+Its colours follow the theme toggle.
+
+<div class="mermaid">
+flowchart LR
+    Plan --> Run --> Review
+    style Plan fill:var(--bg-raised),stroke:var(--accent),color:var(--fg-strong)
+</div>
+
 ## Tabs
 
 === "pip"
