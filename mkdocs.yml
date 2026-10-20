@@ -11,7 +11,6 @@ copyright: © INXM GmbH
 
 theme:
   name: inxm
-  mermaid: true
   tagline: Theme docs
   nav_links:
     - title: inxm.ai

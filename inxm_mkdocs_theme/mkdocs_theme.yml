@@ -21,7 +21,7 @@ fontshare: true
 
 # Render Mermaid diagrams with theme colours and an expandable dialog.
 # Enabling this loads Mermaid 11 from jsDelivr.
-mermaid: false
+mermaid: true
 
 # Branding. `logo` is a path relative to docs_dir. When null, the INXM pill
 # mark is rendered inline as SVG. `logo_text` defaults to site_name; set it to

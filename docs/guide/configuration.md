@@ -8,7 +8,7 @@ theme:
   color_scheme: auto          # auto | dark | light
   color_scheme_toggle: true
   fontshare: true
-  mermaid: false
+  mermaid: true
   logo: null                  # path relative to docs_dir
   logo_text: null             # defaults to site_name; false hides it
   tagline: Docs               # "// Docs" above the sidebar
@@ -37,8 +37,8 @@ theme:
 
 ## Mermaid diagrams
 
-Set `theme.mermaid: true` to load Mermaid 11 from jsDelivr and render diagrams
-using the active INXM colour tokens. Readers can click a diagram or focus it
+Mermaid support is enabled by default. The theme loads Mermaid 11 from jsDelivr
+and renders diagrams using the active INXM colour tokens. Readers can click a diagram or focus it
 and press Enter or Space to open a larger view. Close it with the Close button
 or Escape.
 
@@ -48,7 +48,7 @@ extensions that replace code fences, such as `pymdownx.superfences`, use a
 
 The theme supplies all diagram CSS and JavaScript. Remove site-local Mermaid
 assets and their `extra_css` / `extra_javascript` entries when migrating.
-Leave `mermaid` disabled for sites that must not load this external library.
+Set `theme.mermaid: false` for sites that must not load this external library.
 Callout tints are included regardless of the Mermaid setting.
 
 ## Branding
