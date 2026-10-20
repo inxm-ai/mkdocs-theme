@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function openDiagram(diagram) {
     var dialog = document.createElement('dialog');
     dialog.className = 'mermaid-dialog';
+    dialog.setAttribute('aria-label', 'Diagram');
     dialog.innerHTML = '<div class="mermaid-dialog__bar">'
       + '<span class="mermaid-dialog__title">Diagram</span>'
       + '<button class="mermaid-dialog__close" type="button" aria-label="Close diagram">Close</button>'
@@ -123,5 +124,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }).observe(document.documentElement, {
     attributes: true,
     attributeFilter: ['data-theme']
+  });
+
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (!document.documentElement.hasAttribute('data-theme')) renderDiagrams();
   });
 });

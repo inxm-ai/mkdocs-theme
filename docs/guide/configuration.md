@@ -42,6 +42,9 @@ and renders diagrams using the active INXM colour tokens. Readers can click a di
 and press Enter or Space to open a larger view. Close it with the Close button
 or Escape.
 
+Diagrams follow both the theme toggle and operating-system colour scheme changes
+when the site is using automatic colours without a saved or forced scheme.
+
 Use a fenced `mermaid` block with MkDocs' standard Markdown renderer. With
 extensions that replace code fences, such as `pymdownx.superfences`, use a
 `<div class="mermaid">` element or configure the extension to emit that class.
