@@ -46,10 +46,8 @@ theme:
 Callout colours and shared Mermaid rendering are included by default.
 Use fenced `mermaid` blocks or `<div class="mermaid">`
 elements. Diagrams use the active theme's colour tokens and can be opened with
-a click, Enter, or Space. No per-site Mermaid CSS or JavaScript is needed;
-remove any existing Mermaid entries from `extra_css` and `extra_javascript`
-to avoid loading the renderer twice. Set `theme.mermaid: false` to disable
-diagram rendering and loading Mermaid from the CDN.
+a click, Enter, or Space. No per-site Mermaid CSS or JavaScript is needed.
+Set `theme.mermaid: false` to disable diagram rendering and loading Mermaid from the CDN.
 
 ## Develop
 
