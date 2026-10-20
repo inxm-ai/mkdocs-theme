@@ -27,6 +27,7 @@ theme:
   color_scheme: auto          # auto | dark | light
   color_scheme_toggle: true
   fontshare: true             # load Satoshi from Fontshare; false = Geist only, no third parties
+  mermaid: true               # themed, expandable diagrams; loads Mermaid 11 from jsDelivr
   logo: null                  # path in docs_dir; null renders the INXM pill inline
   logo_text: null             # defaults to site_name; false hides it
   tagline: Docs               # "// Docs" above the sidebar nav
@@ -39,6 +40,14 @@ theme:
   footer_text: null           # HTML; defaults to `copyright`
   footer_links: []            # [{title, url}]
 ```
+
+## Diagrams and callouts
+
+Callout colours and shared Mermaid rendering are included by default.
+Use fenced `mermaid` blocks or `<div class="mermaid">`
+elements. Diagrams use the active theme's colour tokens and can be opened with
+a click, Enter, or Space. No per-site Mermaid CSS or JavaScript is needed.
+Set `theme.mermaid: false` to disable diagram rendering and loading Mermaid from the CDN.
 
 ## Develop
 

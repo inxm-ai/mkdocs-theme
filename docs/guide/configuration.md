@@ -8,6 +8,7 @@ theme:
   color_scheme: auto          # auto | dark | light
   color_scheme_toggle: true
   fontshare: true
+  mermaid: true
   logo: null                  # path relative to docs_dir
   logo_text: null             # defaults to site_name; false hides it
   tagline: Docs               # "// Docs" above the sidebar
@@ -33,6 +34,25 @@ theme:
 
 `light`
 :   Always light. The toggle is hidden.
+
+## Mermaid diagrams
+
+Mermaid support is enabled by default. The theme loads Mermaid 11 from jsDelivr
+and renders diagrams using the active INXM colour tokens. Readers can click a diagram or focus it
+and press Enter or Space to open a larger view. Close it with the Close button
+or Escape.
+
+Diagrams follow both the theme toggle and operating-system colour scheme changes
+when the site is using automatic colours without a saved or forced scheme.
+
+Use a fenced `mermaid` block with MkDocs' standard Markdown renderer. With
+extensions that replace code fences, such as `pymdownx.superfences`, use a
+`<div class="mermaid">` element or configure the extension to emit that class.
+
+The theme supplies all diagram CSS and JavaScript. Remove site-local Mermaid
+assets and their `extra_css` / `extra_javascript` entries when migrating.
+Set `theme.mermaid: false` for sites that must not load this external library.
+Callout tints are included regardless of the Mermaid setting.
 
 ## Branding
 
